@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+}
+
+#header{
+    position: fixed;
+    border-bottom: 2px;
+}
+
+#top {
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 20%;
+  width: 200px;
+  color: white;
+  background: #4aaaa5;
+}
+
+#p-fixed {
+	position: fixed;
+	height: 100px;
+	width: 200px;
+	top: 0;
+	left: 0;
+  	background: #eee;
+}
+
+#main {
+	position: relative;
+    width:500px;
+    top:50px;
+    left:33.3%;
+    text-align: left;
+}
