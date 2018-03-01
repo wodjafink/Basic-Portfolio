@@ -1,6 +1,19 @@
 /* Jared Mednick
    UC Berkeley Coding Bootcamp
+
+   Maybe the only time I'll be using CSS so directly, but I'm going to
+   endeavour to keep it organized using this
+
+   https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/
+  
+  Positioning
+  Box Model
+  Color
+  Text
+  Other
+
  */
+
 /* This makes sizing things way easier, still trying to understand what it does */
 * {
   box-sizing: border-box;
@@ -9,60 +22,74 @@
 /* Settings for HTML tags */
 body {  
   margin: 0;
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+
   color: #777777;
+
   line-height: 30px;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   text-align: left;
 }
 
 header  {
-  font-family: 'Georgia', Times, Times New Roman, serif;
+
   float: left;
-  background-color: #4aaaa5;
-  color: #ffffff;
-  border-bottom: none;
+
   height: 100%;
   width: 270px;
+  border-bottom: none;
   margin-left: 100px;
   margin-bottom: 0;
+  padding-top: 15px;
+
+  background-color: #4aaaa5;
+  color: #ffffff;
+
+  font-family: 'Georgia', Times, Times New Roman, serif;
   text-align: center;
   font-size: 1.5em;
-  padding-top: 15px;
+
 }
 
 h2,
 h3  {
-  color: #4aaaa5;
-  border-bottom:  1px solid #dddddd;
-  font-family: 'Georgia', Times, Times New Roman, serif;
   margin-top: 1px;
+  border-bottom:  1px solid #dddddd;
   padding-bottom: 3px;
+
+  color: #4aaaa5;
+
+  font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
 nav {
-  width: 270px;
   float: right;
-  text-align: center;
+
+  width: 270px;
   margin-right: 125px;
+
+  text-align: center;
 }
 
 ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 li {
   float: left;
+
   width: 33%;
   padding: 10px;
 }
 
 li.border {
+  display: inline-block;
   border-right: 1px solid #dddddd;
   padding: 10px;
+
   vertical-align: middle;
-  display: inline-block;
 }
 
 li.border:after{
@@ -74,82 +101,142 @@ li.border:after{
 
 a {
   color: #777777;
+  
   text-decoration: none;
 }
 
 section {
-  background-color: #ffffff;
   float: left;
+  
+  background-color: #ffffff;
   color: #777777;
 }
 
 footer {
   bottom: 0;
-  clear: both;
   margin: 0 auto;
-  vertical-align: middle;
+  margin-bottom: -2px;
+  clear: both;
+
   padding: 18px;
   height: 70px;
-  background-color: #666666;
   width: 100%;
   border-bottom: none;
+
   color: #bbbbbb;
+  background-color: #666666;
+
   text-align: center;
+  vertical-align: middle;
   font-size: 10px;
-  margin-bottom: -2px;
+}
+
+textarea,
+input {
+  width: 100%;
+  border-style: solid;
+  border-width: thin;
+
+  color: #bbbbbb;
+  border-color: #dddddd;
+}
+
+textarea
+{
+  height: 200px;
+}
+
+input {
+  height: 30px;
+}
+
+/* 
+ Getting the placeholder text to look nice is a bit complicated, requires a
+ pseudo-element.  See
+ https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-input-placeholder
+*/
+input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #bbbbbb;
 }
 
 /* Unique IDs for some of the different sections */
-
 .header-container {
   border-bottom: 2px solid #cccccc;
+
   background-color: #ffffff;
+
   height: 60px;
 }
 
 .main-container {
   clear: both;
   overflow: auto;
-  margin: 0 auto;
-  background-image: url("../images/mochaGrunge_@2X.png");
-  width: 100%;
+
   border-bottom: 5px solid #4aaaa5;
+  margin: 0 auto;
+  width: 100%;
+
+  background-image: url("../images/mochaGrunge_@2X.png");
 }
 
 .icon {
   width: 60px;
   height: auto;
-  color: none;
-  border-right: none;
+}
+
+.button {
+  position: relative;
+
+  width: 100px;
+  height: 40px;
+  border: none;
+  top: 6px;
+
+  background-color: #4aaaa5;
+  color: #ffffff;
+
+  font-size: 16px;
 }
 
 /* Classes applied to some of the objects */
 
 #social-links {
   float: right;
+
   padding: 5px;
   width: 270px;
   top: 30px;
-  text-align: center;
   margin-right: 75px;
-  margin-top: 30px
+  margin-top: 30px;
+
+  text-align: center;
 }
 
+#contact-me,
 #main-bio {
   position: relative;
-  text-align: left;
+
   width: 650px;
   top: 30px;
   margin-left: 100px;
   margin-bottom: 50px;
   height: auto;
   padding: 10px;
+
+  text-align: left;
 }
 
 #my-image {
   clear: both;
   float: left;
+
   margin-right: 20px;
   width: 200px;
   height: 200px;
+}
+
+#contact-me {
+  padding: 20px;
+  height: 500px;
 }
